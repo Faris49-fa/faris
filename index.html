@@ -1,1 +1,69 @@
-html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="home">
+  <header>
+    <h1>هلا والله اقلط اقلط</h1> <!-- تم تغيير النص هنا -->
+  </header>
+
+  <div class="container">
+    <h2>اختر نوع الأسئلة:</h2>
+    <div id="mathLink" onclick="window.location.href='mathQuestions.html'">
+      أسئلة الرياضيات
+    </div>
+    <div id="religionLink" onclick="window.location.href='religionQuestions.html'">
+      أسئلة دينية
+    </div>
+    <div id="saudiLeagueLink" onclick="window.location.href='saudiLeagueQuestions.html'">
+      أسئلة الدوري السعودي
+    </div>
+
+    <!-- عرض درجات الاختبارات تحت الأسئلة -->
+    <div id="scores">
+      <h3>الدرجات:</h3>
+      <p>درجة اختبار أسئلة الرياضيات: <span id="mathScore">00</span></p>
+      <p>درجة اختبار أسئلة الدين: <span id="religionScore">00</span></p>
+      <p>درجة اختبار أسئلة الدوري السعودي: <span id="saudiLeagueScore">00</span></p>
+    </div>
+
+    <!-- زر REST لإعادة تعيين الدرجات -->
+    <div id="resetButton">
+      <button onclick="resetScores()" style="background-color: #ff7f32; color: white; padding: 10px 20px; font-size: 1.2em; border: none; border-radius: 5px; cursor: pointer;">
+        REST
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <p>تم تطوير اللعبة بواسطة فارس</p>
+  </footer>
+
+  <script>
+    // جلب الدرجات من localStorage وعرضها في الصفحة الرئيسية
+    const mathScore = localStorage.getItem('mathScore') || 0;
+    const religionScore = localStorage.getItem('religionScore') || 0;
+    const saudiLeagueScore = localStorage.getItem('saudiLeagueScore') || 0;
+
+    document.getElementById('mathScore').textContent = mathScore;
+    document.getElementById('religionScore').textContent = religionScore;
+    document.getElementById('saudiLeagueScore').textContent = saudiLeagueScore;
+
+    // دالة لإعادة تعيين الدرجات
+    function resetScores() {
+      localStorage.setItem('mathScore', 0);
+      localStorage.setItem('religionScore', 0);
+      localStorage.setItem('saudiLeagueScore', 0);
+
+      // تحديث الصفحة لإظهار الدرجات بعد إعادة تعيينها
+      document.getElementById('mathScore').textContent = "00";
+      document.getElementById('religionScore').textContent = "00";
+      document.getElementById('saudiLeagueScore').textContent = "00";
+    }
+  </script>
+</body>
+</html>
