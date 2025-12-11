@@ -75,3 +75,56 @@
           <div class="options">
             ${shuffledOptions.map(option => `
               <button class="option" onclick="checkAnswer('${option}')">${option}</button>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        showResult();
+      }
+    }
+
+    // دالة لخلط الخيارات
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // تبادل العناصر
+      }
+      return array;
+    }
+
+    // دالة للتحقق من الإجابة
+    function checkAnswer(selectedAnswer) {
+      const question = selectedQuestions[currentQuestionIndex];
+      question.userAnswer = selectedAnswer;
+      if (selectedAnswer === question.correctAnswer) {
+        score++;
+      }
+      currentQuestionIndex++;
+      displayQuestion();
+    }
+
+    // دالة لعرض النتيجة
+    function showResult() {
+      document.getElementById('result').style.display = 'block';
+      let answersHTML = "";
+
+      selectedQuestions.forEach((question, index) => {
+        const answerClass = question.userAnswer === question.correctAnswer ? 'correct' : 'incorrect';
+        answersHTML += `
+          <div class="answer ${answerClass}">
+            <p><strong>${question.question}</strong></p> <!-- عرض السؤال بدون رقم -->
+            <p><strong>إجابتك:</strong> ${question.userAnswer}</p>
+            <p><strong>الإجابة الصحيحة:</strong> ${question.correctAnswer}</p>
+            <p><strong>${question.userAnswer === question.correctAnswer ? 'إجابة صحيحة' : 'إجابة خاطئة'}</strong></p>
+            <hr/>
+          </div>
+        `;
+      });
+      document.getElementById('answers').innerHTML = answersHTML;
+      localStorage.setItem('saudiLeagueScore', score); // حفظ درجة الدوري السعودي
+    }
+
+    displayQuestion(); // استدعاء دالة عرض الأسئلة
+  </script>
+</body>
+</html>
