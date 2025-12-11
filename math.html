@@ -30,36 +30,35 @@
   </footer>
 
   <script>
-    // إضافة 28 سؤال رياضيات
     const allMathQuestions = [
-      { question: "1. ما هو ناتج 15 × 8؟", options: ["120", "130", "140", "125"], correctAnswer: "120", userAnswer: "" },
-      { question: "2. ما هو الجذر التربيعي للعدد 64؟", options: ["6", "7", "8", "9"], correctAnswer: "8", userAnswer: "" },
-      { question: "3. إذا كان x = 5، فما هو قيمة 2x + 3؟", options: ["10", "13", "8", "15"], correctAnswer: "13", userAnswer: "" },
-      { question: "4. إذا كان محيط دائرة يساوي 31.4، فما هو قطرها؟", options: ["5", "7", "10", "3"], correctAnswer: "10", userAnswer: "" },
-      { question: "5. ما هو مجموع الزوايا الداخلية للمثلث؟", options: ["180 درجة", "360 درجة", "90 درجة", "270 درجة"], correctAnswer: "180 درجة", userAnswer: "" },
-      { question: "6. إذا كانت مساحة المستطيل 24 متر مربع وطوله 6 متر، ما هو عرضه؟", options: ["4 متر", "6 متر", "5 متر", "8 متر"], correctAnswer: "4 متر", userAnswer: "" },
-      { question: "7. ما هو ناتج 3² + 4²؟", options: ["25", "16", "20", "19"], correctAnswer: "25", userAnswer: "" },
-      { question: "8. إذا كانت درجة الحرارة 25 درجة مئوية، فما هو معادلها بالفهرنهايت؟", options: ["77", "80", "90", "100"], correctAnswer: "77", userAnswer: "" },
-      { question: "9. كم عدد الزوايا في المربع؟", options: ["4", "5", "6", "3"], correctAnswer: "4", userAnswer: "" },
-      { question: "10. ما هو قيمة 3π؟", options: ["9.42", "8.42", "10.42", "6.28"], correctAnswer: "9.42", userAnswer: "" },
-      { question: "11. ما هو الجذر التربيعي للعدد 144؟", options: ["11", "12", "13", "14"], correctAnswer: "12", userAnswer: "" },
-      { question: "12. ما هو ناتج 45 ÷ 5؟", options: ["9", "8", "7", "10"], correctAnswer: "9", userAnswer: "" },
-      { question: "13. كم عدد الأضلاع في شكل مسدس؟", options: ["6", "8", "7", "4"], correctAnswer: "6", userAnswer: "" },
-      { question: "14. إذا كانت y = 2x + 1 و x = 4، فما هي قيمة y؟", options: ["8", "9", "7", "6"], correctAnswer: "9", userAnswer: "" },
-      { question: "15. إذا كان طول الضلع في مربع 6 متر، فما هي مساحته؟", options: ["36 متر مربع", "30 متر مربع", "24 متر مربع", "25 متر مربع"], correctAnswer: "36 متر مربع", userAnswer: "" },
-      { question: "16. ما هو ناتج 5 × 9 ÷ 3؟", options: ["15", "20", "30", "25"], correctAnswer: "15", userAnswer: "" },
-      { question: "17. ما هو ناتج 4³؟", options: ["64", "56", "70", "80"], correctAnswer: "64", userAnswer: "" },
-      { question: "18. إذا كان لديك مثلث قائم الزاوية طول أحد ضلعيه 6 متر وآخر 8 متر، فما هو طول الوتر؟", options: ["10 متر", "12 متر", "14 متر", "9 متر"], correctAnswer: "10 متر", userAnswer: "" },
-      { question: "19. ما هو عدد الحلول للمعادلة x² - 9 = 0؟", options: ["حل واحد", "حلين", "ثلاثة حلول", "أربعة حلول"], correctAnswer: "حلين", userAnswer: "" },
-      { question: "20. إذا كان المحيط هو 18 مترًا وطول أحد الأضلاع هو 4 متر، فما هو عرض المستطيل؟", options: ["3 متر", "5 متر", "6 متر", "7 متر"], correctAnswer: "3 متر", userAnswer: "" },
-      { question: "21. إذا كانت معادلة الدالة هي y = 3x + 4، فما هي قيمة y عندما x = 2؟", options: ["6", "9", "10", "8"], correctAnswer: "10", userAnswer: "" },
-      { question: "22. ما هو ناتج 50 - 7 × 4؟", options: ["22", "30", "18", "16"], correctAnswer: "22", userAnswer: "" },
-      { question: "23. ما هو قياس الزاوية الداخلية في مثمن منتظم؟", options: ["135 درجة", "120 درجة", "150 درجة", "160 درجة"], correctAnswer: "135 درجة", userAnswer: "" },
-      { question: "24. إذا كانت درجة الحرارة -10 درجة مئوية، فما هي معادلها بالفهرنهايت؟", options: ["14 درجة", "10 درجة", "5 درجة", "-20 درجة"], correctAnswer: "14 درجة", userAnswer: "" },
-      { question: "25. ما هو مجموع زوايا المثلث المتساوي الأضلاع؟", options: ["180 درجة", "360 درجة", "90 درجة", "270 درجة"], correctAnswer: "180 درجة", userAnswer: "" },
-      { question: "26. كم عدد الأضلاع في السداسي؟", options: ["6", "5", "7", "8"], correctAnswer: "6", userAnswer: "" },
-      { question: "27. ما هو ناتج 12 × 12؟", options: ["144", "120", "150", "160"], correctAnswer: "144", userAnswer: "" },
-      { question: "28. ما هو حاصل ضرب 3/4 × 8/9؟", options: ["2/3", "1/2", "1/3", "4/9"], correctAnswer: "2/3", userAnswer: "" }
+      { question: "ما هو ناتج 15 × 8؟", options: ["120", "130", "140", "125"], correctAnswer: "120", userAnswer: "" },
+      { question: "ما هو الجذر التربيعي للعدد 64؟", options: ["6", "7", "8", "9"], correctAnswer: "8", userAnswer: "" },
+      { question: "إذا كان x = 5، فما هو قيمة 2x + 3؟", options: ["10", "13", "8", "15"], correctAnswer: "13", userAnswer: "" },
+      { question: "إذا كان محيط دائرة يساوي 31.4، فما هو قطرها؟", options: ["5", "7", "10", "3"], correctAnswer: "10", userAnswer: "" },
+      { question: "ما هو مجموع الزوايا الداخلية للمثلث؟", options: ["180 درجة", "360 درجة", "90 درجة", "270 درجة"], correctAnswer: "180 درجة", userAnswer: "" },
+      { question: "إذا كانت مساحة المستطيل 24 متر مربع وطوله 6 متر، ما هو عرضه؟", options: ["4 متر", "6 متر", "5 متر", "8 متر"], correctAnswer: "4 متر", userAnswer: "" },
+      { question: "ما هو ناتج 3² + 4²؟", options: ["25", "16", "20", "19"], correctAnswer: "25", userAnswer: "" },
+      { question: "إذا كانت درجة الحرارة 25 درجة مئوية، فما هو معادلها بالفهرنهايت؟", options: ["77", "80", "90", "100"], correctAnswer: "77", userAnswer: "" },
+      { question: "كم عدد الزوايا في المربع؟", options: ["4", "5", "6", "3"], correctAnswer: "4", userAnswer: "" },
+      { question: "ما هو قيمة 3π؟", options: ["9.42", "8.42", "10.42", "6.28"], correctAnswer: "9.42", userAnswer: "" },
+      { question: "ما هو الجذر التربيعي للعدد 144؟", options: ["11", "12", "13", "14"], correctAnswer: "12", userAnswer: "" },
+      { question: "ما هو ناتج 45 ÷ 5؟", options: ["9", "8", "7", "10"], correctAnswer: "9", userAnswer: "" },
+      { question: "كم عدد الأضلاع في شكل مسدس؟", options: ["6", "8", "7", "4"], correctAnswer: "6", userAnswer: "" },
+      { question: "إذا كانت y = 2x + 1 و x = 4، فما هي قيمة y؟", options: ["8", "9", "7", "6"], correctAnswer: "9", userAnswer: "" },
+      { question: "إذا كان طول الضلع في مربع 6 متر، فما هي مساحته؟", options: ["36 متر مربع", "30 متر مربع", "24 متر مربع", "25 متر مربع"], correctAnswer: "36 متر مربع", userAnswer: "" },
+      { question: "ما هو ناتج 5 × 9 ÷ 3؟", options: ["15", "20", "30", "25"], correctAnswer: "15", userAnswer: "" },
+      { question: "ما هو ناتج 4³؟", options: ["64", "56", "70", "80"], correctAnswer: "64", userAnswer: "" },
+      { question: "إذا كان لديك مثلث قائم الزاوية طول أحد ضلعيه 6 متر وآخر 8 متر، فما هو طول الوتر؟", options: ["10 متر", "12 متر", "14 متر", "9 متر"], correctAnswer: "10 متر", userAnswer: "" },
+      { question: "ما هو عدد الحلول للمعادلة x² - 9 = 0؟", options: ["حل واحد", "حلين", "ثلاثة حلول", "أربعة حلول"], correctAnswer: "حلين", userAnswer: "" },
+      { question: "إذا كان المحيط هو 18 مترًا وطول أحد الأضلاع هو 4 متر، فما هو عرض المستطيل؟", options: ["3 متر", "5 متر", "6 متر", "7 متر"], correctAnswer: "3 متر", userAnswer: "" },
+      { question: "إذا كانت معادلة الدالة هي y = 3x + 4، فما هي قيمة y عندما x = 2؟", options: ["6", "9", "10", "8"], correctAnswer: "10", userAnswer: "" },
+      { question: "ما هو ناتج 50 - 7 × 4؟", options: ["22", "30", "18", "16"], correctAnswer: "22", userAnswer: "" },
+      { question: "ما هو قياس الزاوية الداخلية في مثمن منتظم؟", options: ["135 درجة", "120 درجة", "150 درجة", "160 درجة"], correctAnswer: "135 درجة", userAnswer: "" },
+      { question: "إذا كانت درجة الحرارة -10 درجة مئوية، فما هي معادلها بالفهرنهايت؟", options: ["14 درجة", "10 درجة", "5 درجة", "-20 درجة"], correctAnswer: "14 درجة", userAnswer: "" },
+      { question: "ما هو مجموع زوايا المثلث المتساوي الأضلاع؟", options: ["180 درجة", "360 درجة", "90 درجة", "270 درجة"], correctAnswer: "180 درجة", userAnswer: "" },
+      { question: "كم عدد الأضلاع في السداسي؟", options: ["6", "5", "7", "8"], correctAnswer: "6", userAnswer: "" },
+      { question: "ما هو ناتج 12 × 12؟", options: ["144", "120", "150", "160"], correctAnswer: "144", userAnswer: "" },
+      { question: "ما هو حاصل ضرب 3/4 × 8/9؟", options: ["2/3", "1/2", "1/3", "4/9"], correctAnswer: "2/3", userAnswer: "" }
     ];
 
     let currentQuestionIndex = 0;
@@ -114,15 +113,14 @@
 
     // دالة لعرض النتيجة
     function showResult() {
-      document.getElementById('result').textContent = `انتهت الأسئلة! درجتك: ${score} من ${selectedQuestions.length}`;
-      document.getElementById('answersList').style.display = 'block';
-
+      document.getElementById('result').style.display = 'block';
       let answersHTML = "";
+
       selectedQuestions.forEach((question, index) => {
         const answerClass = question.userAnswer === question.correctAnswer ? 'correct' : 'incorrect';
         answersHTML += `
           <div class="answer ${answerClass}">
-            <p><strong>السؤال ${index + 1}:</strong> ${question.question}</p>
+            <p><strong>${question.question}</strong></p> <!-- حذف رقم السؤال -->
             <p><strong>إجابتك:</strong> ${question.userAnswer}</p>
             <p><strong>الإجابة الصحيحة:</strong> ${question.correctAnswer}</p>
             <p><strong>${question.userAnswer === question.correctAnswer ? 'إجابة صحيحة' : 'إجابة خاطئة'}</strong></p>
