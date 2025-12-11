@@ -27,34 +27,30 @@
 
   <script>
     const allQuestions = [
-      { question: "1. من هو الفريق الذي فاز بالدوري السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الاتحاد", userAnswer: "" },
-      { question: "2. من هو الهداف التاريخي للدوري السعودي؟", options: ["ناصر الشمراني", "عبدالله السالم", "سالم الدوسري", "مروان داكوستا"], correctAnswer: "ناصر الشمراني", userAnswer: "" },
-      { question: "3. كم عدد الفرق المشاركة في الدوري السعودي هذا الموسم؟", options: ["16", "14", "12", "10"], correctAnswer: "16", userAnswer: "" },
-      { question: "4. أي فريق فاز بكأس ولي العهد السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الاهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "5. ما هو الفريق الذي يعد أكثر فوزًا في تاريخ الدوري السعودي؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "6. من هو مدرب فريق النصر 2023؟", options: ["رودي جارسيا", "بيدرو إيمانويل", "دانيال كارينيو", "خوسيه مورينيو"], correctAnswer: "رودي جارسيا", userAnswer: "" },
-      { question: "7. أي فريق يمتلك أكبر عدد من البطولات في تاريخ الدوري السعودي؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "8. من هو الفريق الذي فاز بالدوري السعودي لعام 2022؟", options: ["الهلال", "الاتحاد", "النصر", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "9. من هو اللاعب الذي حصل على لقب أفضل لاعب في الدوري السعودي 2023؟", options: ["أندرسون تاليسكا", "موسى ماريغا", "عبدالرزاق حمدالله", "سالم الدوسري"], correctAnswer: "عبدالرزاق حمدالله", userAnswer: "" },
-      { question: "10. ما هو النادي الذي يعد الأكثر تتويجًا بكأس الملك؟", options: ["الهلال", "الاتحاد", "الأهلي", "النصر"], correctAnswer: "الاتحاد", userAnswer: "" },
-      { question: "11. من هو الفريق الذي فاز بكأس السوبر السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "12. كم عدد المرات التي فاز فيها النصر بالدوري السعودي؟", options: ["9", "8", "7", "6"], correctAnswer: "9", userAnswer: "" },
-      { question: "13. من هو اللاعب الذي سجل أكبر عدد من الأهداف في موسم واحد من الدوري السعودي؟", options: ["ناصر الشمراني", "عبدالله السالم", "محمود كهربا", "أندرسون تاليسكا"], correctAnswer: "ناصر الشمراني", userAnswer: "" },
-      { question: "14. من هو اللاعب الأكثر مشاركة في المباريات في الدوري السعودي؟", options: ["سالم الدوسري", "أحمد الفريدي", "أمرابط", "أندرسون تاليسكا"], correctAnswer: "سالم الدوسري", userAnswer: "" },
-      { question: "15. ما هو الفريق الذي احتل المركز الثالث في الدوري السعودي 2023؟", options: ["النصر", "الاتحاد", "الهلال", "الأهلي"], correctAnswer: "النصر", userAnswer: "" },
-      { question: "16. ما هو اللاعب الذي فاز بجائزة أفضل حارس في الدوري السعودي 2023؟", options: ["محمد العويس", "عبدالله المعيوف", "مارسيلو جروهي", "موسى حجيج"], correctAnswer: "مارسيلو جروهي", userAnswer: "" },
-      { question: "17. ما هو الفريق الذي يمتلك أكبر عدد من البطولات القارية؟", options: ["الهلال", "الاتحاد", "النصر", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "18. من هو الفريق الذي فاز بأكبر عدد من بطولات كأس آسيا؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "19. ما هو النادي الذي يعد الأكثر تتويجًا بكأس ولي العهد؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "20. من هو اللاعب الذي فاز بجائزة أفضل لاعب في الدوري السعودي موسم 2022؟", options: ["سالم الدوسري", "موسى ماريغا", "عبدالرزاق حمدالله", "أندرسون تاليسكا"], correctAnswer: "عبدالرزاق حمدالله", userAnswer: "" },
-      { question: "21. ما هو الفريق الذي فاز بكأس الملك في 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "22. من هو الفريق الذي فاز بكأس السوبر السعودي 2022؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "23. ما هو الفريق الذي فاز بأكبر عدد من البطولات المحلية؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "24. كم عدد المرات التي فاز فيها الاتحاد بالدوري السعودي؟", options: ["8", "7", "5", "6"], correctAnswer: "8", userAnswer: "" },
-      { question: "25. ما هو الفريق الذي فاز بكأس الاتحاد السعودي 2022؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الاتحاد", userAnswer: "" },
-      { question: "26. من هو اللاعب الأكثر تسجيلاً للأهداف في تاريخ الدوري السعودي؟", options: ["ناصر الشمراني", "عبدالله السالم", "أندرسون تاليسكا", "محمود كهربا"], correctAnswer: "ناصر الشمراني", userAnswer: "" },
-      { question: "27. من هو الفريق الذي فاز بكأس الملك في 2022؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
-      { question: "28. ما هو الفريق الذي فاز بكأس السوبر السعودي 2021؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" }
+      { question: "من هو الفريق الذي فاز بالدوري السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الاتحاد", userAnswer: "" },
+      { question: "من هو الهداف التاريخي للدوري السعودي؟", options: ["ناصر الشمراني", "عبدالله السالم", "سالم الدوسري", "مروان داكوستا"], correctAnswer: "ناصر الشمراني", userAnswer: "" },
+      { question: "كم عدد الفرق المشاركة في الدوري السعودي هذا الموسم؟", options: ["16", "14", "12", "10"], correctAnswer: "16", userAnswer: "" },
+      { question: "أي فريق فاز بكأس ولي العهد السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الاهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "ما هو الفريق الذي يعد أكثر فوزًا في تاريخ الدوري السعودي؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو مدرب فريق النصر 2023؟", options: ["رودي جارسيا", "بيدرو إيمانويل", "دانيال كارينيو", "خوسيه مورينيو"], correctAnswer: "رودي جارسيا", userAnswer: "" },
+      { question: "أي فريق يمتلك أكبر عدد من البطولات في تاريخ الدوري السعودي؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو الفريق الذي فاز بالدوري السعودي لعام 2022؟", options: ["الهلال", "الاتحاد", "النصر", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو اللاعب الذي حصل على لقب أفضل لاعب في الدوري السعودي 2023؟", options: ["أندرسون تاليسكا", "موسى ماريغا", "عبدالرزاق حمدالله", "سالم الدوسري"], correctAnswer: "عبدالرزاق حمدالله", userAnswer: "" },
+      { question: "ما هو النادي الذي يعد الأكثر تتويجًا بكأس الملك؟", options: ["الهلال", "الاتحاد", "الأهلي", "النصر"], correctAnswer: "الاتحاد", userAnswer: "" },
+      { question: "من هو الفريق الذي فاز بكأس السوبر السعودي 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "كم عدد المرات التي فاز فيها النصر بالدوري السعودي؟", options: ["9", "8", "7", "6"], correctAnswer: "9", userAnswer: "" },
+      { question: "من هو اللاعب الذي سجل أكبر عدد من الأهداف في موسم واحد من الدوري السعودي؟", options: ["ناصر الشمراني", "عبدالله السالم", "محمود كهربا", "أندرسون تاليسكا"], correctAnswer: "ناصر الشمراني", userAnswer: "" },
+      { question: "من هو اللاعب الأكثر مشاركة في المباريات في الدوري السعودي؟", options: ["سالم الدوسري", "أحمد الفريدي", "أمرابط", "أندرسون تاليسكا"], correctAnswer: "سالم الدوسري", userAnswer: "" },
+      { question: "ما هو الفريق الذي احتل المركز الثالث في الدوري السعودي 2023؟", options: ["النصر", "الاتحاد", "الهلال", "الأهلي"], correctAnswer: "النصر", userAnswer: "" },
+      { question: "ما هو اللاعب الذي فاز بجائزة أفضل حارس في الدوري السعودي 2023؟", options: ["محمد العويس", "عبدالله المعيوف", "مارسيلو جروهي", "موسى حجيج"], correctAnswer: "مارسيلو جروهي", userAnswer: "" },
+      { question: "ما هو الفريق الذي يمتلك أكبر عدد من البطولات القارية؟", options: ["الهلال", "الاتحاد", "النصر", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو الفريق الذي فاز بأكبر عدد من بطولات كأس آسيا؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "ما هو النادي الذي يعد الأكثر تتويجًا بكأس ولي العهد؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو اللاعب الذي فاز بجائزة أفضل لاعب في الدوري السعودي موسم 2022؟", options: ["سالم الدوسري", "موسى ماريغا", "عبدالرزاق حمدالله", "أندرسون تاليسكا"], correctAnswer: "عبدالرزاق حمدالله", userAnswer: "" },
+      { question: "ما هو الفريق الذي فاز بكأس الملك في 2023؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "من هو الفريق الذي فاز بكأس السوبر السعودي 2022؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "ما هو الفريق الذي فاز بأكبر عدد من البطولات المحلية؟", options: ["الهلال", "النصر", "الاتحاد", "الأهلي"], correctAnswer: "الهلال", userAnswer: "" },
+      { question: "كم عدد المرات التي فاز فيها الاتحاد بالدوري السعودي؟", options: ["8", "7", "5", "6"], correctAnswer: "8", userAnswer: "" }
     ];
 
     let currentQuestionIndex = 0;
@@ -79,56 +75,3 @@
           <div class="options">
             ${shuffledOptions.map(option => `
               <button class="option" onclick="checkAnswer('${option}')">${option}</button>
-            `).join('')}
-          </div>
-        `;
-      } else {
-        showResult();
-      }
-    }
-
-    // دالة لخلط الخيارات
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // تبادل العناصر
-      }
-      return array;
-    }
-
-    // دالة للتحقق من الإجابة
-    function checkAnswer(selectedAnswer) {
-      const question = selectedQuestions[currentQuestionIndex];
-      question.userAnswer = selectedAnswer;
-      if (selectedAnswer === question.correctAnswer) {
-        score++;
-      }
-      currentQuestionIndex++;
-      displayQuestion();
-    }
-
-    // دالة لعرض النتيجة
-    function showResult() {
-      document.getElementById('result').style.display = 'block';
-      let answersHTML = "";
-
-      selectedQuestions.forEach((question, index) => {
-        const answerClass = question.userAnswer === question.correctAnswer ? 'correct' : 'incorrect';
-        answersHTML += `
-          <div class="answer ${answerClass}">
-            <p><strong>السؤال ${index + 1}:</strong> ${question.question}</p>
-            <p><strong>إجابتك:</strong> ${question.userAnswer}</p>
-            <p><strong>الإجابة الصحيحة:</strong> ${question.correctAnswer}</p>
-            <p><strong>${question.userAnswer === question.correctAnswer ? 'إجابة صحيحة' : 'إجابة خاطئة'}</strong></p>
-            <hr/>
-          </div>
-        `;
-      });
-      document.getElementById('answers').innerHTML = answersHTML;
-      localStorage.setItem('saudiLeagueScore', score);
-    }
-
-    displayQuestion();
-  </script>
-</body>
-</html>
