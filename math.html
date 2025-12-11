@@ -15,13 +15,9 @@
     <!-- سيتم عرض الأسئلة هنا -->
   </div>
   
-  <div id="result"></div>
-  <div id="answersList" style="display:none;">
+  <div id="result" style="display:none;">
     <h3>إجاباتك:</h3>
     <div id="answers"></div>
-  </div>
-  
-  <div id="backToHome">
     <button onclick="window.location.href='index.html'">العودة إلى الصفحة الرئيسية</button>
   </div>
 
@@ -79,7 +75,7 @@
         const question = selectedQuestions[currentQuestionIndex];
         const shuffledOptions = shuffle(question.options); // خلط الخيارات عشوائيًا
         document.getElementById("questionContainer").innerHTML = `
-          <p class="question">${question.question}</p>
+          <p class="question">${question.question}</p> <!-- حذف رقم السؤال -->
           <div class="options">
             ${shuffledOptions.map(option => `
               <button class="option" onclick="checkAnswer('${option}')">${option}</button>
