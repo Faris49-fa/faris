@@ -32,34 +32,34 @@
   <script>
     // إضافة الأسئلة الدينية
     const allReligionQuestions = [
-      { question: "1. من هو أول نبي في الإسلام؟", options: ["آدم", "نوح", "إبراهيم", "محمد صلى الله عليه وسلم"], correctAnswer: "آدم", userAnswer: "" },
-      { question: "2. ما هي أطول آية في القرآن الكريم؟", options: ["آية الكرسي", "آية الميراث", "آية الدين (البقرة: 282)", "آية الصيام"], correctAnswer: "آية الدين (البقرة: 282)", userAnswer: "" },
-      { question: "3. ما هي السورة التي يطلق عليها \"قلب القرآن\"؟", options: ["الفاتحة", "البقرة", "يس", "الرحمن"], correctAnswer: "يس", userAnswer: "" },
-      { question: "4. ما هو حكم صيام يوم عاشوراء؟", options: ["فرض", "سنة", "مستحب", "غير جائز"], correctAnswer: "سنة", userAnswer: "" },
-      { question: "5. من هو النبي الذي ابتلعه الحوت؟", options: ["يونس", "موسى", "إبراهيم", "محمد صلى الله عليه وسلم"], correctAnswer: "يونس", userAnswer: "" },
-      { question: "6. ما هو حكم صلاة الضحى؟", options: ["فرض", "سنة", "مستحب", "واجب"], correctAnswer: "سنة", userAnswer: "" },
-      { question: "7. هل يجوز الصيام في يوم الجمعة فقط؟", options: ["نعم", "لا", "نعم بشرط أن يكون مع يوم آخر", "نعم ولكن بغير سنة"], correctAnswer: "لا", userAnswer: "" },
-      { question: "8. من هو النبي الذي بنى الكعبة؟", options: ["إبراهيم", "موسى", "عيسى", "محمد صلى الله عليه وسلم"], correctAnswer: "إبراهيم", userAnswer: "" },
-      { question: "9. ما هي آخر سورة نزلت في القرآن الكريم؟", options: ["النساء", "المائدة", "البقرة", "التوبة"], correctAnswer: "المائدة", userAnswer: "" },
-      { question: "10. ما هي السورة التي تحتوي على آية الدين؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" },
-      { question: "11. ما هي السورة التي يطلق عليها \"سورة الحواميم\"؟", options: ["الفاتحة", "الحاقة", "الفتح", "غافر"], correctAnswer: "غافر", userAnswer: "" },
-      { question: "12. ما هي السورة التي تبدأ بحروف مقطعة؟", options: ["الفاتحة", "ق", "المدثر", "السجدة"], correctAnswer: "ق", userAnswer: "" },
-      { question: "13. ما هي أول سورة نزلت في القرآن الكريم؟", options: ["العلق", "الفاتحة", "البقرة", "المدثر"], correctAnswer: "العلق", userAnswer: "" },
-      { question: "14. ما هي السورة التي تبدأ بـ \"يا أيها الناس\"؟", options: ["الفاتحة", "الإخلاص", "البقرة", "الحج"], correctAnswer: "الحج", userAnswer: "" },
-      { question: "15. ما هو حكم الصلاة في الحذاء؟", options: ["جائز", "محرم", "مستحب", "واجب"], correctAnswer: "جائز", userAnswer: "" },
-      { question: "16. ما هي السورة التي تحتوي على آية الميراث؟", options: ["البقرة", "النساء", "آل عمران", "المائدة"], correctAnswer: "النساء", userAnswer: "" },
-      { question: "17. ما هو حكم لبس الذهب للرجال في الإسلام؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "محرم", userAnswer: "" },
-      { question: "18. من هو النبي الذي قام برفض أن يُسجد له إبليس؟", options: ["آدم", "إبراهيم", "محمد صلى الله عليه وسلم", "نوح"], correctAnswer: "آدم", userAnswer: "" },
-      { question: "19. من هو الصحابي الذي أسلم في عمر متأخر وكان من أقوى الصحابة؟", options: ["أبو بكر الصديق", "عمر بن الخطاب", "عثمان بن عفان", "علي بن أبي طالب"], correctAnswer: "عمر بن الخطاب", userAnswer: "" },
-      { question: "20. ما هو حكم أداء الحج لمن يملك القدرة المالية؟", options: ["فرض", "مستحب", "واجب", "جائز"], correctAnswer: "فرض", userAnswer: "" },
-      { question: "21. هل يجوز صيام التطوع في الأيام الممنوعة؟", options: ["نعم", "لا", "نعم بشرط", "نعم إذا كان الفرد قد صام في الأيام العادية"], correctAnswer: "لا", userAnswer: "" },
-      { question: "22. ما هي السورة التي نزلت في السنة الثانية للهجرة؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" },
-      { question: "23. ما هو حكم الصلاة في الحذاء؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "جائز", userAnswer: "" },
-      { question: "24. ما هو عدد ركعات صلاة الفجر؟", options: ["3", "4", "2", "5"], correctAnswer: "2", userAnswer: "" },
-      { question: "25. ما هو حكم لبس الذهب للرجال في الإسلام؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "محرم", userAnswer: "" },
-      { question: "26. ما هي السورة التي تبدأ بحروف مقطعة؟", options: ["الفاتحة", "ق", "المدثر", "السجدة"], correctAnswer: "ق", userAnswer: "" },
-      { question: "27. ما هو حكم الإفطار في رمضان بدون عذر؟", options: ["مستحب", "فرض", "يجب القضاء والكفارة", "لا يجب"], correctAnswer: "يجب القضاء والكفارة", userAnswer: "" },
-      { question: "28. ما هي السورة التي تحتوي على آية الكرسي؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" }
+      { question: "من هو أول نبي في الإسلام؟", options: ["آدم", "نوح", "إبراهيم", "محمد صلى الله عليه وسلم"], correctAnswer: "آدم", userAnswer: "" },
+      { question: "ما هي أطول آية في القرآن الكريم؟", options: ["آية الكرسي", "آية الميراث", "آية الدين (البقرة: 282)", "آية الصيام"], correctAnswer: "آية الدين (البقرة: 282)", userAnswer: "" },
+      { question: "ما هي السورة التي يطلق عليها \"قلب القرآن\"؟", options: ["الفاتحة", "البقرة", "يس", "الرحمن"], correctAnswer: "يس", userAnswer: "" },
+      { question: "ما هو حكم صيام يوم عاشوراء؟", options: ["فرض", "سنة", "مستحب", "غير جائز"], correctAnswer: "سنة", userAnswer: "" },
+      { question: "من هو النبي الذي ابتلعه الحوت؟", options: ["يونس", "موسى", "إبراهيم", "محمد صلى الله عليه وسلم"], correctAnswer: "يونس", userAnswer: "" },
+      { question: "ما هو حكم صلاة الضحى؟", options: ["فرض", "سنة", "مستحب", "واجب"], correctAnswer: "سنة", userAnswer: "" },
+      { question: "هل يجوز الصيام في يوم الجمعة فقط؟", options: ["نعم", "لا", "نعم بشرط أن يكون مع يوم آخر", "نعم ولكن بغير سنة"], correctAnswer: "لا", userAnswer: "" },
+      { question: "من هو النبي الذي بنى الكعبة؟", options: ["إبراهيم", "موسى", "عيسى", "محمد صلى الله عليه وسلم"], correctAnswer: "إبراهيم", userAnswer: "" },
+      { question: "ما هي آخر سورة نزلت في القرآن الكريم؟", options: ["النساء", "المائدة", "البقرة", "التوبة"], correctAnswer: "المائدة", userAnswer: "" },
+      { question: "ما هي السورة التي تحتوي على آية الدين؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" },
+      { question: "ما هي السورة التي يطلق عليها \"سورة الحواميم\"؟", options: ["الفاتحة", "الحاقة", "الفتح", "غافر"], correctAnswer: "غافر", userAnswer: "" },
+      { question: "ما هي السورة التي تبدأ بحروف مقطعة؟", options: ["الفاتحة", "ق", "المدثر", "السجدة"], correctAnswer: "ق", userAnswer: "" },
+      { question: "ما هي أول سورة نزلت في القرآن الكريم؟", options: ["العلق", "الفاتحة", "البقرة", "المدثر"], correctAnswer: "العلق", userAnswer: "" },
+      { question: "ما هي السورة التي تبدأ بـ \"يا أيها الناس\"؟", options: ["الفاتحة", "الإخلاص", "البقرة", "الحج"], correctAnswer: "الحج", userAnswer: "" },
+      { question: "ما هو حكم الصلاة في الحذاء؟", options: ["جائز", "محرم", "مستحب", "واجب"], correctAnswer: "جائز", userAnswer: "" },
+      { question: "ما هي السورة التي تحتوي على آية الميراث؟", options: ["البقرة", "النساء", "آل عمران", "المائدة"], correctAnswer: "النساء", userAnswer: "" },
+      { question: "ما هو حكم لبس الذهب للرجال في الإسلام؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "محرم", userAnswer: "" },
+      { question: "من هو النبي الذي قام برفض أن يُسجد له إبليس؟", options: ["آدم", "إبراهيم", "محمد صلى الله عليه وسلم", "نوح"], correctAnswer: "آدم", userAnswer: "" },
+      { question: "من هو الصحابي الذي أسلم في عمر متأخر وكان من أقوى الصحابة؟", options: ["أبو بكر الصديق", "عمر بن الخطاب", "عثمان بن عفان", "علي بن أبي طالب"], correctAnswer: "عمر بن الخطاب", userAnswer: "" },
+      { question: "ما هو حكم أداء الحج لمن يملك القدرة المالية؟", options: ["فرض", "مستحب", "واجب", "جائز"], correctAnswer: "فرض", userAnswer: "" },
+      { question: "هل يجوز صيام التطوع في الأيام الممنوعة؟", options: ["نعم", "لا", "نعم بشرط", "نعم إذا كان الفرد قد صام في الأيام العادية"], correctAnswer: "لا", userAnswer: "" },
+      { question: "ما هي السورة التي نزلت في السنة الثانية للهجرة؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" },
+      { question: "ما هو حكم الصلاة في الحذاء؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "جائز", userAnswer: "" },
+      { question: "ما هو عدد ركعات صلاة الفجر؟", options: ["3", "4", "2", "5"], correctAnswer: "2", userAnswer: "" },
+      { question: "ما هو حكم لبس الذهب للرجال في الإسلام؟", options: ["جائز", "محرم", "مستحب", "مكروه"], correctAnswer: "محرم", userAnswer: "" },
+      { question: "ما هي السورة التي تبدأ بحروف مقطعة؟", options: ["الفاتحة", "ق", "المدثر", "السجدة"], correctAnswer: "ق", userAnswer: "" },
+      { question: "ما هو حكم الإفطار في رمضان بدون عذر؟", options: ["مستحب", "فرض", "يجب القضاء والكفارة", "لا يجب"], correctAnswer: "يجب القضاء والكفارة", userAnswer: "" },
+      { question: "ما هي السورة التي تحتوي على آية الكرسي؟", options: ["البقرة", "آل عمران", "النساء", "المائدة"], correctAnswer: "البقرة", userAnswer: "" }
     ];
 
     let currentQuestionIndex = 0;
@@ -114,15 +114,14 @@
 
     // دالة لعرض النتيجة
     function showResult() {
-      document.getElementById('result').textContent = `انتهت الأسئلة! درجتك: ${score} من ${selectedReligionQuestions.length}`;
-      document.getElementById('answersList').style.display = 'block';
-
+      document.getElementById('result').style.display = 'block';
       let answersHTML = "";
+
       selectedReligionQuestions.forEach((question, index) => {
         const answerClass = question.userAnswer === question.correctAnswer ? 'correct' : 'incorrect';
         answersHTML += `
           <div class="answer ${answerClass}">
-            <p><strong>السؤال ${index + 1}:</strong> ${question.question}</p>
+            <p><strong>${question.question}</strong></p> <!-- حذف رقم السؤال -->
             <p><strong>إجابتك:</strong> ${question.userAnswer}</p>
             <p><strong>الإجابة الصحيحة:</strong> ${question.correctAnswer}</p>
             <p><strong>${question.userAnswer === question.correctAnswer ? 'إجابة صحيحة' : 'إجابة خاطئة'}</strong></p>
