@@ -1,172 +1,126 @@
-/* استيراد خطوط احترافية */
+/* استيراد خط القاهرة الفخم */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
 
-* {
+/* إعدادات عامة لكل الصفحات لمنع الفراغات */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden; /* يمنع الهز الجانبي */
     font-family: 'Cairo', sans-serif;
+    background: #0f172a; /* خلفية الألعاب الداكنة */
 }
 
-body.home {
-    background: #0f172a; /* خلفية داكنة جداً */
-    background-image: 
-        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(249, 115, 22, 0.1) 0px, transparent 50%);
-    color: #f8fafc;
-    min-height: screen;
-    direction: rtl;
+/* خلفية النيون المتحركة لكل الموقع */
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    direction: rtl;
+    color: #f8fafc;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(249, 115, 22, 0.15) 0px, transparent 50%);
 }
 
-header {
-    padding: 40px 0;
-    text-align: center;
-}
-
+/* --- تنسيق العنوان الرئيسي --- */
 header h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 900;
-    text-transform: uppercase;
+    margin-bottom: 20px;
     background: linear-gradient(to right, #3b82f6, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
-}
-
-.container {
-    width: 90%;
-    max-width: 600px;
-    background: rgba(30, 41, 59, 0.7);
-    padding: 30px;
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-    color: #cbd5e1;
-}
-
-/* تنسيق روابط الأسئلة (الأزرار) */
-#mathLink, #religionLink, #saudiLeagueLink {
-    background: #1e293b;
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    display: block;
-}
-
-#mathLink:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
-#religionLink:hover { border-color: #10b981; box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); transform: translateY(-3px); }
-#saudiLeagueLink:hover { border-color: #f97316; box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); transform: translateY(-3px); }
-
-/* قسم الدرجات */
-#scores {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(15, 23, 42, 0.6);
-    border-radius: 15px;
-    text-align: right;
-}
-
-#scores h3 {
-    color: #f97316;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 5px;
-}
-
-#scores p {
-    font-size: 1rem;
-    margin: 8px 0;
-    color: #94a3b8;
-    display: flex;
-    justify-content: space-between;
-}
-
-#scores span {
-    color: #3b82f6;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
-}
-
-/* زر الـ REST */
-#resetButton {
-    margin-top: 25px;
-}
-
-#resetButton button {
-    width: 100%;
-    transition: all 0.3s ease !important;
-    font-weight: 900 !important;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
-}
-
-#resetButton button:hover {
-    filter: brightness(1.2);
-    transform: scale(1.02);
-}
-
-footer {
-    margin-top: auto;
+/* --- الحاوية (الكونتينر) - مبرمجة لتملا الشاشة --- */
+.container, .quiz-container {
+    width: 92%;
+    max-width: 600px;
+    min-height: 80vh; /* تأخذ 80% من طول شاشة الأيباد/الجوال */
+    background: rgba(30, 41, 59, 0.75);
     padding: 30px;
-    color: #64748b;
-    font-size: 0.9rem;
-}
-/* تجعل جسم الصفحة يملأ الشاشة بالكامل ويمنع التمرير إذا لم تكن هناك حاجة */
-html, body.home {
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* يمنع ظهور شريط التمرير الجانبي */
-}
-
-body.home {
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* يضع المحتوى في منتصف الشاشة عمودياً */
-    align-items: center;
-    background-size: cover;
+    justify-content: space-around; /* توزيع العناصر بشكل طولي */
 }
 
-/* تعديل الحاوية لتكون متجاوبة وتأخذ مساحة أكبر */
-.container {
-    width: 95%; /* تأخذ أغلب عرض الشاشة في الجوال */
-    max-width: 500px; /* تحافظ على شكلها في الشاشات الكبيرة */
-    min-height: 80vh; /* تأخذ 80% من طول الشاشة */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; /* يوزع البطاقات بمسافات متساوية */
-    padding: 20px;
-}
-
-/* جعل البطاقات (الأزرار) تمتد لتملأ العرض المتاح */
+/* --- تنسيق البطاقات في الصفحة الرئيسية (Home) --- */
 #mathLink, #religionLink, #saudiLeagueLink {
-    flex-grow: 1; /* تجعل الأزرار تحاول أخذ مساحة متساوية */
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px 0;
-    font-size: 1.4rem; /* تكبير الخط ليناسب الشاشة الكاملة */
+    background: #1e293b;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
 }
 
-/* تحسين شكل قسم الدرجات ليناسب العرض الكامل */
+#mathLink:hover { border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); transform: scale(1.03); }
+#religionLink:hover { border-color: #10b981; box-shadow: 0 0 30px rgba(16, 185, 129, 0.4); transform: scale(1.03); }
+#saudiLeagueLink:hover { border-color: #f97316; box-shadow: 0 0 30px rgba(249, 115, 22, 0.4); transform: scale(1.03); }
+
+/* --- تنسيق صفحات الأسئلة (تكبير الخيارات) --- */
+/* هذا الجزء يستهدف الأزرار داخل صفحات الأسئلة */
+.container button, .container .option, button[onclick*="checkAnswer"] {
+    width: 100% !important;
+    padding: 22px !important;
+    margin: 12px 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    border-radius: 20px !important;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container button:active {
+    transform: scale(0.95); /* تأثير الضغط */
+}
+
+/* تنسيق نص السؤال داخل الصفحات */
+.container p, .container h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.5;
+    color: #f1f5f9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* قسم الدرجات في الصفحة الرئيسية */
 #scores {
-    flex-grow: 0.5;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+#scores p {
+    font-size: 1rem !important;
+    margin: 5px 0 !important;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+/* تذييل الصفحة */
+footer {
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+    text-align: center;
 }
